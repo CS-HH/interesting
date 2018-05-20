@@ -12,7 +12,18 @@ import java.util.List;
  */
 public class UserDTO extends User{
 
-    public UserDTO(String nickName, String account, int sex, String email, int age, String avatar, List<User> friends) {
+    private String jwt;
+
+    public String getJwt() {
+        return jwt;
+    }
+
+    public void setJwt(String jwt) {
+        this.jwt = jwt;
+    }
+
+    public UserDTO(String nickName, String account, int sex, String email, int age, String avatar, List<User> friends,String jwt) {
         super(nickName, account, sex, email, age, avatar, friends);
+        this.jwt = jwt;
     }
 }
